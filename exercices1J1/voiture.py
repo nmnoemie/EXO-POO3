@@ -12,18 +12,16 @@ class Voiture:
     def afficher(self):
         valeur = self.estimer_valeur()
         print(f"{self.marque} {self.modele} ({self.annee}) — {self.kilometrage} km — Valeur : {valeur}€")
-         
-    def est_recente(self):
-        return self.annee >= 2020
+
+def est_recente(self):
+    return self.annee >= 2020
     
-    def parcourir(self, distance):
-        self.kilometrage += distance
+def parcourir(self, distance):
+    self.kilometrage += distance
     
-    def estimer_valeur(self):
-        valeur = self.prix_neuf - (self.kilometrage * 0.05)
-        return float(max(valeur, 0))
+def estimer_valeur(self):
+    valeur = self.prix_neuf - (self.kilometrage * 0.05)
+    return float(max(valeur, 0))
 
 
-v1 = Voiture("Renault", "Clio", 2019, 45000, 15000)
-v2 = Voiture("Peugeot", "208", 2022, 12000, 18000)
 
